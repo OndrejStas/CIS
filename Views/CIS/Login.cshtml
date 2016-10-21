@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.4.custom.js"></script>
+    <script src="~/Scripts/script.js"></script>
+    <link href="~/Content/Styles/runnable.css" rel="stylesheet" />
+    <link href="~/Content/Styles/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+
+     <title>CIS</title>
+
+    <style>
+        fieldset { 
+                    display: block;
+                    margin-left: 2px;
+                    margin-right: 2px;
+                    padding-top: 0.35em;
+                    padding-bottom: 0.625em;
+                    padding-left: 0.75em;
+                    padding-right: 0.75em;
+                   }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <div id="header" ><h1>CIS</h1></div>
+    
+    
+<form action="/home/Login">
+    <div style="text-align:center;">
+    <fieldset style="text-align:left; width :30%; margin-left:auto;margin-right:auto;">
+        <legend  align="left" >Přihlášení</legend>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:40%;">Uživatelské jméno:</td> <td style="width:60%;"><input style="width:100%;" type="text" name="userid"></td>
+            </tr>
+            <tr>
+                <td style="width:40%;">Heslo:</td> <td style="width:60%;"><input style="width:100%;" type="password" name="psw"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:right;"><input style="width:20%; " value="Přihlásit"  type="submit" name="btnLogin"></td>
+            </tr>
+        </table>
+    </fieldset>
+    </div>    
+</form>
+       
+        
+
+ 
+    
+    <div id="footer"> cis Copyright © </div>
+</body>
+</html>

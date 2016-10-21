@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.4.custom.js"></script>
+    <script src="~/Scripts/script.js"></script>
+    <link href="~/Content/Styles/runnable.css" rel="stylesheet" />
+    <link href="~/Content/Styles/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+
+    
+    <script language="javascript" type="text/javascript">
+        function resizeIframe(obj) {
+            obj.style.height = 0;
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            obj.style.height = "500px";
+            //alert(obj.style.height);
+        }
+    </script>
+
+     <script>
+         window.onload = function () { setState();};
+         
+    </script>
+    
+     <title>CIS</title>
+</head>
+
+<body>
+    
+
+    <div id="header" ><h1>CIS</h1></div>
+    
+   	<div class="navigation">
+  		<ul class="nav">
+            <li style="width:10%;">
+  				<a href="#">&nbsp;</a>
+  			</li>
+  			<li style="width:10%;">
+  				<a href="javascript:menuCall('Matrika/Mt')">Matrika</a>
+                  <ul>
+                      <li><a href="#">Křestní</a></li>
+                      <li><a href="#">Biřmovní</a></li>  
+                      <li><a href="#">Sňatky</a></li>
+                  </ul>
+  			</li>
+  			<li style="width:10%;">
+  				<a href="#">Evidence</a>
+  				<ul>
+  					<li><a href="javascript:menuCall('Evidence/Evd')">Evidence osob</a></li>
+  					<li><a href="#">Osob</a></li>                                            
+  					<li><a href="#">Farností</a></li>
+  				</ul>
+  			</li>
+  			<li style="width:10%;">
+  				<a href="#">Administrace</a>
+  				<ul>
+  					<li><a href="#">Company</a></li>
+  					<li><a href="#">Mission</a></li>
+  					<li><a href="#">Contact Information</a></li>
+  				</ul>
+  			</li>
+        	<li style="width:60%;">
+  				<a href="#">&nbsp;</a>
+  			</li>
+  		</ul>
+  	</div>
+   
+
+    <iframe id="main-frame" src="Evidence/Evd" style=" padding:0px;  float: left;position: relative; width:100%; border:0px;" frameborder="0"  onload="resizeIframe(this);" scrolling="no"   seamless="seamless" >
+        
+
+    </iframe>
+    
+    <div id="footer"> cis Copyright © </div>
+</body>
+</html>

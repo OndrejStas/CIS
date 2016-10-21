@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "EvidenceOsob";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    @*<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">*@
+   @* <script src="~/Scripts/jquery-3.0.0.min.js"></script>*@
+   @* <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>*@
+  @* <script src="~/Scripts/jquery-1.10.2.js"></script>*@
+    
+    <script src="http://code.jquery.com/jquery-latest.js"  type="text/javascript"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+     <link href="~/Content/Styles/jquery.dataTables.css" rel="stylesheet" />
+
+    @*<script src="~/Scripts/jquery.dataTables.js"></script>*@
+    <link href="~/Content/Styles/cis.css" rel="stylesheet" />
+@*  "url": window.location.href +"http://localhost:65196/home/local"*@
+<script>
+   // alert("http://" + window.location.host + "/Data/Osoby");
+$(document).ready(function() {
+    var table =   $('#example').DataTable
+        (
+            {
+                "processing": true,
+                "serverSide": true,
+                "ajax" : {
+                    "url": "http://" + window.location.host + "/Data/Osoby",
+                    "type": "POST"
+                },
+                "language":
+                    {
+                        "url": "http://" + window.location.host + "/home/local"
+                        
+                    },
+                "columns": [
+           // { "data": "OSO_ID" },
+	{ "data": "OSO_TitulPred" },
+	{ "data": "OSO_Jmeno" },
+	{ "data": "OSO_Prijmeni" },
+	{ "data": "OSO_RodnePrijmeni" },
+	{ "data": "OSO_TitulZa" },
+	{ "data": "OSO_Pohlavi" },
+	{ "data": "OSO_DatumNarozeni" },
+	{ "data": "OSO_MistoNarozeni" },
+	{ "data": "OSO_ID_Otec" },
+	{ "data": "OSO_ID_Matka" },
+	{ "data": "OSO_Ulice" },
+	{ "data": "OSO_CisloPopisne" },
+	{ "data": "OSO_Obec" },
+	{ "data": "OSO_PSC" },
+	{ "data": "OSO_Stat" },
+	{ "data": "OSO_ID_CIRkve" },
+	{ "data": "OSO_ID_STAvy" },
+	{ "data": "OSO_DatumUlozeni" },
+	{ "data": "OSO_ID_Uzivatel" },
+	{ "data": "OSO_DatumPoslAkt" },
+	{ "data": "OSO_ID_UzivatelPoslAkt" }
+                ]
+                
+
+           }
+       );
+   // table.columns('.nonvis').visible(false);
+});
+
+
+</script>
+ <script type="text/javascript">
+     $(window).load(function () {
+         $(".loader").fadeOut(1000);
+     })
+</script>     
+
+</head>
+
+<body style="margin:0px;">
+
+    
+    
+    <div class="loader"></div>
+   
+
+ <div id="extended-bar" style="height:100px; background-color:blue;"></div>
+<table id="example" class="display" cellspacing="0"  width="100%">
+        <thead>
+            <tr>
+                <th class="nonvis">OSO_ID</th>	
+                <th>OSO_TitulPred</th>	
+                <th>OSO_Jmeno</th>	
+                <th>OSO_Prijmeni</th>	
+                <th>OSO_RodnePrijmeni</th>	
+                <th>OSO_TitulZa</th>	
+                <th>OSO_Pohlavi</th>	
+                <th>OSO_DatumNarozeni</th>	
+                <th>OSO_MistoNarozeni</th>	
+                <th>OSO_ID_Otec</th>	
+                <th>OSO_ID_Matka</th>	
+                <th>OSO_Ulice</th>	
+                <th>OSO_CisloPopisne</th>	
+                <th>OSO_Obec</th>
+                <th>OSO_PSC</th>	
+                <th>OSO_Stat</th>
+                <th>OSO_ID_CIRkve</th>	
+                <th>OSO_ID_STAvy</th>
+                <th>OSO_DatumUlozeni</th>
+                <th>OSO_ID_Uzivatel</th>
+                <th>OSO_DatumPoslAkt</th>
+                <th>OSO_ID_UzivatelPoslAkt</th>
+            </tr>
+        </thead>
+        
+        
+    </table>
+  
+</body>
+</html>
